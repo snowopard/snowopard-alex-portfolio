@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowopard Alex | Senior Full Stack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Snowopard Alex</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Senior Full Stack Developer</h1>
+                <h2>10+ Years Building Scalable Systems & AI Solutions</h2>
+                <p>Expert in Go, Python, React, and cloud-native architectures. Delivering high-impact solutions with proven metrics.</p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">99.99%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Time Saved</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10k+</div>
+                        <div class="stat-label">Concurrent Users</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Faster Loads</div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span>main.go</span>
+                    </div>
+                    <pre><code>// High-performance microservice
+package main
+
+import (
+    "github.com/gin-gonic/gin"
+    "github.com/redis/go-redis/v9"
+)
+
+func main() {
+    r := gin.Default()
+    
+    // Redis for caching
+    client := redis.NewClient(&redis.Options{
+        Addr: "localhost:6379",
+    })
+    
+    // Handle 10k+ concurrent users
+    r.GET("/api/products", 
+        cacheMiddleware(client),
+        getProductsHandler)
+    
+    r.Run(":8080")
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section light">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill">
+                            <span>Go</span>
+                            <div class="skill-bar"><div class="level" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>Python</span>
+                            <div class="skill-bar"><div class="level" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>JavaScript</span>
+                            <div class="skill-bar"><div class="level" style="width: 88%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skill-list">
+                        <div class="skill">
+                            <span>Gin / Echo</span>
+                            <div class="skill-bar"><div class="level" style="width: 92%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>FastAPI</span>
+                            <div class="skill-bar"><div class="level" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>Laravel</span>
+                            <div class="skill-bar"><div class="level" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-list">
+                        <div class="skill">
+                            <span>PostgreSQL</span>
+                            <div class="skill-bar"><div class="level" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>MongoDB</span>
+                            <div class="skill-bar"><div class="level" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>Redis</span>
+                            <div class="skill-bar"><div class="level" style="width: 88%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud"></i> DevOps</h3>
+                    <div class="skill-list">
+                        <div class="skill">
+                            <span>Docker</span>
+                            <div class="skill-bar"><div class="level" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>AWS</span>
+                            <div class="skill-bar"><div class="level" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill">
+                            <span>Kubernetes</span>
+                            <div class="skill-bar"><div class="level" style="width: 80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="date">2020 - Present</div>
+                    <div class="content">
+                        <h3>Lead Full-Stack Developer & Consultant</h3>
+                        <p class="company">Self-Employed | Remote</p>
+                        <ul>
+                            <li>Built e-commerce platform with 99.99% uptime for 10k+ users</li>
+                            <li>Developed AI automation saving 200+ hours/month</li>
+                            <li>Created distributed systems with Go and React</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="date">2018 - 2020</div>
+                    <div class="content">
+                        <h3>Software Engineer - HR Tech</h3>
+                        <p class="company">Talentor Singapore</p>
+                        <ul>
+                            <li>Built ATS for 25+ recruiters, 5,000+ candidates</li>
+                            <li>Automated resume screening (40% time reduction)</li>
+                            <li>Optimized platform performance by 60%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section light">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>alex@snowopard.dev</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/snowopard-alex</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p>github.com/snowopard-alex</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Snowopard Alex. All rights reserved.</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

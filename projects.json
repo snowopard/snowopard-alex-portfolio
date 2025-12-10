@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "title": "E-Commerce Platform",
+            "description": "High-performance microservices architecture built with Go and React",
+            "technologies": ["Go", "React", "PostgreSQL", "Redis", "Docker", "AWS"],
+            "metrics": {
+                "uptime": "99.99%",
+                "concurrentUsers": "10,000+",
+                "conversion": "8% increase"
+            }
+        },
+        {
+            "title": "AI Document Processor",
+            "description": "Intelligent workflow automation system using Python and LangChain",
+            "technologies": ["Python", "FastAPI", "LangChain", "OpenAI", "React", "MongoDB"],
+            "metrics": {
+                "timeReduction": "85%",
+                "hoursSaved": "200+ monthly",
+                "accuracy": "95%"
+            }
+        }
+    ]
+}

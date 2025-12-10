@@ -1,0 +1,16 @@
+{
+    "name": "snowopard-alex-portfolio",
+    "version": "1.0.0",
+    "description": "Professional portfolio for Snowopard Alex - Senior Full Stack Developer",
+    "main": "index.html",
+    "scripts": {
+        "start": "live-server --port=3000",
+        "deploy": "gh-pages -d ."
+    },
+    "devDependencies": {
+        "live-server": "^1.2.2",
+        "gh-pages": "^5.0.0"
+    },
+    "author": "Snowopard Alex",
+    "license": "MIT"
+}
